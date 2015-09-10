@@ -6,16 +6,16 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "react": "latest"
-  },
-  "devDependencies": {
-    "babel-loader": "latest",
     "body-parser": "latest",
     "express": "latest",
     "falcor": "latest",
     "falcor-express": "latest",
     "falcor-http-datasource": "latest",
     "falcor-router": "latest",
+    "react": "latest"
+  },
+  "devDependencies": {
+    "babel-loader": "latest",
     "webpack": "latest"
   },
   "scripts": {
