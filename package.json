@@ -10,8 +10,12 @@
   },
   "devDependencies": {
     "babel-loader": "latest",
+    "body-parser": "latest",
+    "express": "latest",
     "falcor": "latest",
+    "falcor-express": "latest",
     "falcor-http-datasource": "latest",
+    "falcor-router": "latest",
     "webpack": "latest"
   },
   "scripts": {
