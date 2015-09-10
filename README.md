@@ -8,5 +8,5 @@ A simple, full-stack JavaScript single page app featuring [React](http://faceboo
 
 1. `npm install`
 2. `npm run webpack`
-3. Navigate to http://localhost:9090
-
+3. `node --harmony server`
+4. Navigate to http://localhost:9090
