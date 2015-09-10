@@ -21,8 +21,9 @@ class NamesList extends React.Component {
     }
 
     update() {
-        model.get(['names', {from: 0, to: 100}, 'name']).
-            then(response => this.setState({names: response.json.names}))
+        model.getValue(['names', 'length'])
+            .then(length => model.get(['names', {from: 0, to: length-1}, 'name']))
+            .then(response => this.setState({names: response.json.names}))
     }
 }
 

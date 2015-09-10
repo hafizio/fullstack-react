@@ -11,7 +11,11 @@ class NameAdder extends React.Component {
             call(['names', 'add'],
                 [input.value],
                 ["name"]).
-            then(jsonEnvelope => this.props.onAdded())
+            then(jsonEnvelope => {
+                input.value = null
+                input.focus()
+                this.props.onAdded()
+            })
     }
 
     render() {

@@ -13,7 +13,7 @@ var falcor = require('falcor'),
     },
     NamesRouter = Router.createClass([
         {
-            route: "names[{integers:nameIndexes}]['name']",
+            route: 'names[{integers:nameIndexes}]["name"]',
             get: (pathSet) => {
                 var results = [];
                 pathSet.nameIndexes.forEach(function(nameIndex) {
@@ -28,16 +28,28 @@ var falcor = require('falcor'),
             }
         },
         {
-            route: "names.add",
+            route: 'names.length',
+            get: () => {
+                return {path: ['names', 'length'], value: data.names.length}
+            }
+        },
+        {
+            route: 'names.add',
             call: (callPath, args) => {
                 var newName = args[0];
 
                 data.names.push({name: newName})
 
-                return {
-                    path: ['names', data.names.length-1, 'name'],
-                    value: newName
-                }
+                return [
+                    {
+                        path: ['names', data.names.length-1, 'name'],
+                        value: newName
+                    },
+                    {
+                        path: ['names', 'length'],
+                        value: data.names.length
+                    }
+                ]
             }
         }
     ])
