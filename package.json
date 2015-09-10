@@ -1,0 +1,20 @@
+{
+  "name": "fullstack-react",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./site/bundle.js",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "latest"
+  },
+  "devDependencies": {
+    "babel-loader": "latest",
+    "falcor": "latest",
+    "falcor-http-datasource": "latest",
+    "webpack": "latest"
+  },
+  "scripts": {
+    "webpack": "$(npm bin)/webpack -w"
+  }
+}
