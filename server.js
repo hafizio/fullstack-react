@@ -1,5 +1,4 @@
-var falcor = require('falcor'),
-    FalcorServer = require('falcor-express'),
+var FalcorServer = require('falcor-express'),
     bodyParser = require('body-parser'),
     express = require('express'),
     Router = require('falcor-router'),
