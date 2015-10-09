@@ -2,9 +2,9 @@ var React = require('react'),
     model = require('./model.js');
 
 class NamesList extends React.Component {
-    constructor() {
-        super()
-        this.state = {names: []}
+    constructor(props) {
+        super(props)
+        this.state = {names: {}}
     }
 
     componentDidMount() {
@@ -13,7 +13,7 @@ class NamesList extends React.Component {
 
     render() {
         var names = Object.keys(this.state.names).map(idx => {
-            return <li key={idx}>{this.state.names[idx]}</li>
+            return <li key={idx}>{this.state.names[idx].name}</li>
         })
         return (
             <ul>{names}</ul>

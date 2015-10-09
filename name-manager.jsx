@@ -1,4 +1,5 @@
 var React = require('react'),
+    ReactDom = require('react-dom'),
     NameAdder = require('./name-adder.jsx'),
     NamesList = require('./names-list.jsx');
 
@@ -17,4 +18,4 @@ class NameManager extends React.Component {
     }
 }
 
-React.render(<NameManager/>, document.querySelector('#demo'))
+ReactDom.render(<NameManager/>, document.querySelector('#demo'))

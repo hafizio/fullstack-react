@@ -6,17 +6,18 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "latest",
-    "express": "latest",
-    "falcor": "latest",
-    "falcor-express": "latest",
-    "falcor-http-datasource": "latest",
-    "falcor-router": "latest",
-    "react": "latest"
+    "body-parser": "1.14.1",
+    "express": "4.13.3",
+    "falcor": "0.1.13",
+    "falcor-express": "0.1.2",
+    "falcor-http-datasource": "0.1.2",
+    "falcor-router": "0.2.9",
+    "react": "0.14.0",
+    "react-dom": "0.14.0"
   },
   "devDependencies": {
-    "babel-loader": "latest",
-    "webpack": "latest"
+    "babel-loader": "5.3.2",
+    "webpack": "1.12.2"
   },
   "scripts": {
     "webpack": "$(npm bin)/webpack -w"

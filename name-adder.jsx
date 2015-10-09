@@ -5,7 +5,7 @@ class NameAdder extends React.Component {
     handleSubmit(event) {
         event.preventDefault()
 
-        var input = React.findDOMNode(this.refs.input)
+        var input = this.refs.input
 
         model.
             call(['names', 'add'],
