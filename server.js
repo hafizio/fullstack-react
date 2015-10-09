@@ -18,7 +18,7 @@ var FalcorServer = require('falcor-express'),
                 pathSet.nameIndexes.forEach(function(nameIndex) {
                     if (data.names.length > nameIndex) {
                         results.push({
-                            path: ['names', nameIndex, pathSet[2]],
+                            path: ['names', nameIndex, 'name'],
                             value: data.names[nameIndex].name
                         })
                     }
