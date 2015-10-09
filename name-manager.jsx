@@ -11,8 +11,8 @@ class NameManager extends React.Component {
     render() {
         return (
             <div>
-                <NameAdder url="/name" onAdded={this.handleNameAdded.bind(this)}/>
-                <NamesList url="/names" ref="namesList"/>
+                <NameAdder onAdded={this.handleNameAdded.bind(this)}/>
+                <NamesList ref="namesList"/>
             </div>
         )
     }
