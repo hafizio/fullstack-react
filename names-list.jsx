@@ -7,7 +7,7 @@ class NamesList extends React.Component {
         this.state = {names: {}}
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.update()
     }
 
