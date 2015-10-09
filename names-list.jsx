@@ -3,6 +3,7 @@ var React = require('react'),
 
 class NamesList extends React.Component {
     constructor() {
+        super()
         this.state = {names: []}
     }
 
