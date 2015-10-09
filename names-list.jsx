@@ -2,8 +2,8 @@ var React = require('react'),
     model = require('./model.js');
 
 class NamesList extends React.Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {names: {}}
     }
 
