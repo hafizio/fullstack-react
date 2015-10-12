@@ -56,7 +56,7 @@ var FalcorServer = require('falcor-express'),
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/model.json', FalcorServer.dataSourceRoute(() => new NamesRouter()))
 app.use(express.static('.'))
-app.listen(9090, (err) => {
+app.listen(9090, err => {
     if (err) {
         console.error(err)
         return
