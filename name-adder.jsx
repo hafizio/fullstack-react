@@ -28,4 +28,8 @@ class NameAdder extends React.Component {
     }
 }
 
+NameAdder.propTypes = {
+    onAdded: React.PropTypes.func.isRequired
+}
+
 module.exports = NameAdder
