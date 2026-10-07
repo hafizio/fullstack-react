@@ -20,6 +20,6 @@
     "webpack": "1.12.2"
   },
   "scripts": {
-    "webpack": "$(npm bin)/webpack -w"
+    "webpack": "webpack -w"
   }
 }

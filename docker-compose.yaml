@@ -1,0 +1,16 @@
+services:
+  api:
+    image: api-projeto-teste:1.2
+    ports:
+      - "9090:9090"
+    networks:
+      - minha-rede-teste
+    volumes:
+      - meus-dados:/usr/app/data
+networks:
+  minha-rede-teste:
+    external: true
+volumes:
+  meus-dados:
+    external: true
+

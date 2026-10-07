@@ -1,8 +1,13 @@
 var FalcorServer = require('falcor-express'),
     bodyParser = require('body-parser'),
     express = require('express'),
-    Router = require('falcor-router'),
+    Router = require('falcor-router');
+    const fs = require('fs');
+    const path = require('path');
+    const DATA_DIR = path.join(__dirname, 'data');
+    const DATA_FILE = path.join(DATA_DIR, 'names.json');
     app = express(),
+    
     data = {
         names: [
             {name: 'a'},
@@ -38,6 +43,7 @@ var FalcorServer = require('falcor-express'),
                 var newName = args[0];
 
                 data.names.push({name: newName})
+                fs.writeFileSync(DATA_FILE, JSON.stringify(data));
 
                 return [
                     {
@@ -56,7 +62,7 @@ var FalcorServer = require('falcor-express'),
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/model.json', FalcorServer.dataSourceRoute(() => new NamesRouter()))
 app.use(express.static('.'))
-app.listen(9090, err => {
+app.listen(9090, '0.0.0.0', err => {
     if (err) {
         console.error(err)
         return
